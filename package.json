@@ -1,0 +1,23 @@
+{
+  "name": "node-senac",
+  "version": "0.0.1",
+  "description": "Jovem Programador",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaphaelSBarros/Node-senac.git"
+  },
+  "author": "Raphael",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RaphaelSBarros/Node-senac/issues"
+  },
+  "homepage": "https://github.com/RaphaelSBarros/Node-senac#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
