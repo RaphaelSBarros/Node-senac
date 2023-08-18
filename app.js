@@ -1,19 +1,14 @@
 import express from "express";
+import { somar } from "./exercicios/um.js";
 
 const app = express();
+app.use(express.json());
 
-app.get('/api/', (req, res)=>{ // identificado após a ?
-    const nome = req.query.nome;
-
-    res.json({
-        message: `Bem vindo, ${nome}`,
-    });
-});
-app.get('/api/:id', (req, res)=>{ // identificado na url
-    const id = req.params.id;
+app.post('/api/exercicio1', (req, res)=>{ // identificado após a ?
+    const result = somar(req.body.num1, req.body.num2);
 
     res.json({
-        message: `O seu id é: ${id}`,
+        message: `resultado: ${result}`,
     });
 });
 
