@@ -10,6 +10,7 @@ const { milhas } = require('./exercicios/ex5.js');
 const { duracao } = require('./exercicios/ex6.js');
 const { metros } = require('./exercicios/ex7.js');
 const { tabuada } = require('./exercicios/ex8.js');
+const { media } = require('./exercicios/ex9.js');
 
 
 const app = express();
@@ -89,6 +90,13 @@ app.post('/api/desafio2', (req, res)=>{
     const result = maior(req.body.num1, req.body.num2);
     res.status(200).json({
         message: `O maior numero é o: ${result}`
+    });
+});
+
+app.post('/api/exercicio9', (req, res)=>{
+    const result = media(req.body.num1, req.body.num2, req.body.num3);
+    res.status(200).json({
+        message: `O aluno está ${result}`
     });
 });
 
