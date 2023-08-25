@@ -6,6 +6,7 @@ import { celsius } from "./exercicios/ex4.js";
 import { milhas } from "./exercicios/ex5.js";
 import { duracao } from "./exercicios/ex6.js";
 import { metros } from "./exercicios/ex7.js";
+import { tabuada } from "./exercicios/ex8.js";
 
 
 const app = express();
@@ -57,6 +58,13 @@ app.post('/api/exercicio7', (req, res) => {
     const result = metros(req.body.num1);
     res.status(200).json({ 
         message: `Essa distância em metros fica: ${result}`
+    })
+});
+
+app.post('/api/exercicio8', (req, res) => {
+    const result = tabuada(req.body.num1);
+    res.status(200).json({ 
+        message: `A tabuada desse número é: ${result}`
     })
 });
 
