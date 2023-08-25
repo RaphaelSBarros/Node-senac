@@ -1,4 +1,4 @@
-export function tabuada(num1){
+function tabuada(num1){
     let lista = [];
 
     for(let i=1; i<=10;i++){
@@ -6,3 +6,5 @@ export function tabuada(num1){
     }
     return lista;
 }
+
+module.exports = { tabuada };

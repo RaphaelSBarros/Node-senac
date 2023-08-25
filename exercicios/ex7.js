@@ -1,4 +1,4 @@
-export function metros(num1){
+function metros(num1){
     let input = num1;
 
     let m = input * 1000;
@@ -8,3 +8,5 @@ export function metros(num1){
 
     return `${m.toFixed(0)}metros e ${cm.toFixed(0)}centímetros`;
 }
+
+module.exports = { metros };

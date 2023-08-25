@@ -1,4 +1,4 @@
-export function duracao(num1){
+function duracao(num1){
     let input = num1;
 
     let h = parseInt(input/3600);
@@ -11,3 +11,5 @@ export function duracao(num1){
 
     return `${h.toFixed(0)}horas, ${m.toFixed(0)}minutos e ${s.toFixed(0)}segundos`;
 }
+
+module.exports = { duracao };

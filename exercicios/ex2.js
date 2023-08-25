@@ -1,3 +1,5 @@
-export function salario(valorPorHora, horasTrabalhadas){
+function salario(valorPorHora, horasTrabalhadas){
     return valorPorHora * horasTrabalhadas;
 }
+
+module.exports = { salario };
