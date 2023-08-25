@@ -1,5 +1,5 @@
 import { describe, expect, it } from "@jest/globals";
-import { exercicio1 } from "../exercicios/exercicios-parte-um";
+import { exercicio1 } from "../exercicios/um";
 
 describe("Testes do primeiro exercício", () => {
 
@@ -12,7 +12,7 @@ describe("Testes do primeiro exercício", () => {
   afterAll(() => {
     console.info("Encerrados os testes");
   });
-  
+
   // Executando os testes
   it("Should sum two numbers", () => {
     const result = exercicio1(1, 2);
