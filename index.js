@@ -1,5 +1,6 @@
 const express = require('express');
 const { idade } = require('./desafios/des0.js');
+const { troca } = require('./desafios/des1.js');
 const { somar } = require('./exercicios/ex1.js');
 const { salario } = require('./exercicios/ex2.js');
 const { pessoas } = require('./exercicios/ex3.js');
@@ -73,6 +74,13 @@ app.post('/api/desafio0', (req, res)=>{
     const result = idade(req.body.num1);
     res.status(200).json({
         message: `Essa idade representa ${result}`
+    });
+});
+
+app.post('/api/desafio1', (req, res)=>{
+    const result = troca(req.body.num1, req.body.num2);
+    res.status(200).json({
+        message: `A variáveis foram trocadas, ${result}`
     });
 });
 
