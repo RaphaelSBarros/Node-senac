@@ -4,6 +4,7 @@ import { salario } from "./exercicios/ex2.js";
 import { pessoas } from "./exercicios/ex3.js";
 import { celsius } from "./exercicios/ex4.js";
 import { milhas } from "./exercicios/ex5.js";
+import { duracao } from "./exercicios/ex6.js";
 
 
 const app = express();
@@ -43,12 +44,14 @@ app.post('/api/exercicio5', (req, res) => {
         message: `A conversão dessas milhas para km fica: ${result}km`
     })
 });
+
 app.post('/api/exercicio6', (req, res) => {
-    const result = milhas(req.body.num1);
+    const result = duracao(req.body.num1);
     res.status(200).json({ 
-        message: `A conversão dessas milhas para km fica: ${result}km`
+        message: `A duração desse evento foi de: ${result}`
     })
 });
+
 
 app.listen(3000, ()=>{
     console.log("servidor rodando na porta 3000");
