@@ -11,6 +11,7 @@ const { duracao } = require('./exercicios/ex6.js');
 const { metros } = require('./exercicios/ex7.js');
 const { tabuada } = require('./exercicios/ex8.js');
 const { media } = require('./exercicios/ex9.js');
+const { imc } = require('./exercicios/ex10');
 
 
 const app = express();
@@ -95,6 +96,13 @@ app.post('/api/desafio2', (req, res)=>{
 
 app.post('/api/exercicio9', (req, res)=>{
     const result = media(req.body.num1, req.body.num2, req.body.num3);
+    res.status(200).json({
+       result
+    });
+});
+
+app.post('/api/exercicio10', (req, res)=>{
+    const result = imc(req.body.num1, req.body.num2, req.body.num3);
     res.status(200).json({
         message: `O aluno está ${result}`
     });
