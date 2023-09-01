@@ -14,6 +14,7 @@ const { media } = require('./exercicios/ex9.js');
 const { imc } = require('./exercicios/ex10.js');
 const { calc } = require('./exercicios/ex11.js');
 const { positivo } = require('./exercicios/ex12.js');
+const { par } = require('./exercicios/ex13.js');
 
 
 const app = express();
@@ -119,6 +120,13 @@ app.post('/api/exercicio11', (req, res)=>{
 
 app.post('/api/exercicio12', (req, res)=>{
     const result = positivo(req.body.num1);
+    res.status(200).json({
+        message: `O número é: ${result}`
+    });
+});
+
+app.post('/api/exercicio13', (req, res)=>{
+    const result = par(req.body.num1);
     res.status(200).json({
         message: `O número é: ${result}`
     });
