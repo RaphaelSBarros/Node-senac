@@ -11,7 +11,8 @@ const { duracao } = require('./exercicios/ex6.js');
 const { metros } = require('./exercicios/ex7.js');
 const { tabuada } = require('./exercicios/ex8.js');
 const { media } = require('./exercicios/ex9.js');
-const { imc } = require('./exercicios/ex10');
+const { imc } = require('./exercicios/ex10.js');
+const { calc } = require('./exercicios/ex11.js');
 
 
 const app = express();
@@ -105,6 +106,13 @@ app.post('/api/exercicio10', (req, res)=>{
     const result = imc(req.body.num1, req.body.num2);
     res.status(200).json({
         message: `O seu imc é: ${result}`
+    });
+});
+
+app.post('/api/exercicio11', (req, res)=>{
+    const result = calc(req.body.op, req.body.num1, req.body.num2);
+    res.status(200).json({
+        message: `O resultado é: ${result}`
     });
 });
 
