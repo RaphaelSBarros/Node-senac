@@ -16,6 +16,7 @@ const { calc } = require('./exercicios/ex11.js');
 const { positivo } = require('./exercicios/ex12.js');
 const { par } = require('./exercicios/ex13.js');
 const { triangulo } = require('./exercicios/ex15.js');
+const { impostoRenda } = require('./exercicios/ex16.js');
 
 
 const app = express();
@@ -132,6 +133,7 @@ app.post('/api/exercicio13', (req, res)=>{
         message: `O número é: ${result}`
     });
 });
+
 app.post('/api/exercicio14', (req, res)=>{
     const result = maior(req.body.num1, req.body.num2);
     res.status(200).json({
@@ -141,6 +143,13 @@ app.post('/api/exercicio14', (req, res)=>{
 
 app.post('/api/exercicio15', (req, res)=>{
     const result = triangulo(req.body.a, req.body.b, req.body.c);
+    res.status(200).json({
+        result
+    });
+});
+
+app.post('/api/exercicio16', (req, res)=>{
+    const result = impostoRenda(req.body.cpf, req.body.numDep, req.body.rm);
     res.status(200).json({
         result
     });
