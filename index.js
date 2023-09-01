@@ -102,9 +102,9 @@ app.post('/api/exercicio9', (req, res)=>{
 });
 
 app.post('/api/exercicio10', (req, res)=>{
-    const result = imc(req.body.num1, req.body.num2, req.body.num3);
+    const result = imc(req.body.num1, req.body.num2);
     res.status(200).json({
-        message: `O aluno está ${result}`
+        message: `O seu imc é: ${result}`
     });
 });
 

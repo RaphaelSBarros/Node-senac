@@ -1,3 +1,8 @@
+/** FUP que solicite a duração de um evento em segundos e imprima em horas, minutos e segundos;
+ * 
+ * @param {*} num1 
+ * @returns 
+ */
 function duracao(num1){
     let input = num1;
 
