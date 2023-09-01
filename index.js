@@ -131,6 +131,12 @@ app.post('/api/exercicio13', (req, res)=>{
         message: `O número é: ${result}`
     });
 });
+app.post('/api/exercicio14', (req, res)=>{
+    const result = maior(req.body.num1, req.body.num2);
+    res.status(200).json({
+        message: `O maior número é: ${result}`
+    });
+});
 
 
 app.listen(3000, ()=>{
