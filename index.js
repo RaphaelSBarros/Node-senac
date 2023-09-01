@@ -25,7 +25,7 @@ app.post('/api/exercicio1', (req, res) => {
 });
 
 app.post('/api/exercicio2', (req, res) => {
-    const result = salario(req.body.num1, req.body.num2)
+    const result = salario(req.body.vH, req.body.hT)
     res.status(200).json({
         message: `Você receberá ${result} reais ao final do mês`
     });

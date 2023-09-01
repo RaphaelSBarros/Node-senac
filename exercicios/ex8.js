@@ -1,7 +1,7 @@
 /** FUP que peça um número e imprima a tabuada deste número
  * 
- * @param {*} num1 
- * @returns 
+ * @param {*} num1 recebe um número
+ * @returns retorna a tabuada do número
  */
 function tabuada(num1){
     let lista = [];

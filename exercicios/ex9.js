@@ -1,12 +1,12 @@
 /** FUP que calcule a média aritmética das 3 notas de um aluno e mostre, além do valor da média, uma mensagem de "Aprovado", caso a média seja igual ou superior a 7, a mensagem "Recuperação", caso a média se igual ou superior a 5 e inferior a 7, ou a mensagem “Reprovado”, caso a média seja inferior a 5.
  * 
- * @param {*} num1 
- * @param {*} num2 
- * @param {*} num3 
- * @returns 
+ * @param {*} nota1 recebe uma nota
+ * @param {*} nota2 recebe uma nota
+ * @param {*} nota3 recebe uma nota
+ * @returns retorna a média e o status do aluno
  */
-function media(num1, num2, num3){
-    let media = (num1 + num2 + num3)/3;
+function media(nota1, nota2, nota3){
+    let media = (nota1 + nota2 + nota3)/3;
     if(media >= 7){
         return {
             Status: "Aprovado",

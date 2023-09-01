@@ -1,5 +1,5 @@
 {
-  "name": "node-senac",
+  "name": "senac",
   "version": "0.0.1",
   "description": "Jovem Programador",
   "main": "index.js",
@@ -24,5 +24,8 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
+  },
+  "directories": {
+    "test": "test"
   }
 }

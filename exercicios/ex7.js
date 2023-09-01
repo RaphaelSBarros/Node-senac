@@ -1,8 +1,8 @@
 /** FUP que leia um valor em quilometros e converta para metros e centimetro;
 
  * 
- * @param {*} num1 
- * @returns 
+ * @param {*} num1 recebe o valor em km
+ * @returns retorna o valor convertido para metros e centímetros
  */
 function metros(num1){
     let input = num1;
